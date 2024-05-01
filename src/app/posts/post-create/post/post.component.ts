@@ -1,7 +1,7 @@
+// post.component.ts
 import { Component } from '@angular/core';
-
 import { PostService } from './../../post.service';
-import {Post} from './../../post.model'
+import { Post } from './../../post.model';
 
 @Component({
   selector: 'app-post',
@@ -10,14 +10,16 @@ import {Post} from './../../post.model'
 })
 export class PostComponent {
   enteredTitle = '';
+  enteredDate: Date; // Add enteredDate property
   enteredContent = '';
 
   constructor(private postService: PostService) {}
-  // uses new post service to add a post when button clicked
+
   onAddPost() {
     const post: Post = {
       title: this.enteredTitle,
-      content: this.enteredContent
+      content: `${this.enteredContent} Date: ${this.enteredDate}`, // Include date in content
+      date: this.enteredDate // Set date property
     };
     this.postService.addPost(post);
   }
