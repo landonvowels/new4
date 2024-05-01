@@ -17,6 +17,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .create-project-text{
   margin-bottom: px;
+  
 }
 
 .form-container {
@@ -73,28 +74,3 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 
 
-.task-list-container {
-  margin-top: 20px;
-}
-
-.task-input {
-  width: 100%;
-  display: flex;
-  align-items: center;
-}
-
-.task-list {
-  margin-top: 10px;
-}
-
-.task-item {
-  margin-bottom: 5px;
-}
-
-.mat-checkbox-layout {
-  justify-content: start;
-}
-
-.mat-checkbox-label {
-  margin-left: 5px;
-}
