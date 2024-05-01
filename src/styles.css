@@ -2,3 +2,37 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* styles.scss */
+
+/* styles.scss */
+
+.create-project-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .create-project-text {
+    margin-bottom: 20px;
+  }
+  
+  .form-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .project-name, .description, .deadline {
+    flex: 1 1 calc(70% - 10px);
+  }
+  
+  .create-button {
+    width: calc(30% - 10px);
+    margin-top: 20px;
+  }
+  
+  .small-text{
+    padding: 10px;
+    padding-top: 10px;
+  }
