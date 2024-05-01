@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Post } from './post.model';
-import { BehaviorSubject } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
-
+import { BehaviorSubject } from 'rxjs';
+import { Post } from './post.model';
 
 @Injectable({
   providedIn: 'root'
@@ -11,30 +10,30 @@ export class PostService {
   private posts: Post[] = [];
   private postsUpdated = new BehaviorSubject<Post[]>([]);
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
-  // used by post-list component to grab post from server
-  fetchServerPost() {
-    this.http.get<{message: string, posts: Post[]}>('http://localhost:3000/api/posts')
-      .subscribe((postData) => {
-        this.posts = postData.posts;
+  addPost(post: Post) {
+    this.http.post<{ message: string, postId: string }>('http://localhost:3000/api/posts', post)
+      .subscribe((responseData) => {
+        post._id = responseData.postId; // Set the received _id
+        this.posts.push(post);
         this.postsUpdated.next([...this.posts]);
       }, error => {
-        console.error('Failed to fetch posts from server', error);
+        console.error('Failed to add post:', error);
       });
   }
 
-  // Returns an observable for components to subscribe to posts.
-  // used by post-list component
+  fetchPostsFromServer() {
+    this.http.get<{message: string, posts: Post[]}>('http://localhost:3000/api/posts')
+      .subscribe((response) => {
+        this.posts = response.posts; // Ensure the _id field is preserved
+        this.postsUpdated.next([...this.posts]);
+      }, error => {
+        console.error('Failed to fetch posts:', error);
+      });
+  }
+
   getPosts() {
     return this.postsUpdated.asObservable();
   }
-
-  // used by post component, when button pressed
-  addPost(post: Post) {
-    this.posts.push(post);
-    // here is use of spread operator to update the copy of array
-    this.postsUpdated.next([...this.posts]);
-  }
-
 }
