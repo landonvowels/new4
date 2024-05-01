@@ -1,0 +1,46 @@
+mat-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px; /* Adjust padding for spacing on the sides */
+  }
+  
+  /* Brand or logo section */
+  mat-toolbar a:first-child {
+    font-size: 24px; /* Larger font size for the logo or brand name */
+    font-weight: bold;
+    color: #FFFFFF; /* White color for text */
+    text-decoration: none; /* Remove underline from links */
+    margin-right: auto; /* Push all other links to the right */
+  }
+  
+  /* Navigation links */
+  mat-toolbar a {
+    color: rgba(255, 255, 255, 0.8);
+    text-transform: uppercase; /* Stylistic choice for uppercase letters */
+    text-decoration: none; /* Removes underline */
+    margin-left: 20px; /* Spacing between links */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+  }
+  
+  /* Hover effect for links */
+  mat-toolbar a:hover {
+    color: #FFFFFF;
+    text-decoration: underline; /* Underline on hover for better visual feedback */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    mat-toolbar {
+      flex-direction: column;
+      padding: 10px;
+    }
+  
+    mat-toolbar a {
+      margin-top: 10px; /* Stack the links vertically on smaller screens */
+    }
+  
+    mat-toolbar a:first-child {
+      margin-bottom: 10px; /* Extra margin for the brand/logo on small screens */
+    }
+  }
