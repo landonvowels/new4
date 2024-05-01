@@ -7,32 +7,67 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 /* styles.scss */
 
+/* styles.scss */
+
 .create-project-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  
-  .create-project-text {
-    margin-bottom: 20px;
-  }
-  
-  .form-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  
-  .project-name, .description, .deadline {
-    flex: 1 1 calc(70% - 10px);
-  }
-  
-  .create-button {
-    width: calc(30% - 10px);
-    margin-top: 20px;
-  }
-  
-  .small-text{
-    padding: 10px;
-    padding-top: 10px;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.create-project-text{
+  margin-bottom: px;
+}
+
+.form-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.project-name, .description, .deadline {
+  flex: 1 1 calc(70% - 10px);
+}
+
+.create-button {
+  width: calc(30% - 10px);
+  margin-top: 20px;
+}
+
+
+.input-label {
+  margin-bottom: 10px;
+}
+
+.input-label .small-text {
+  font-size: 14px;
+  color: black; /* Adjust text color as needed */
+  display: block;
+  margin-bottom: 5px; /* Adjust spacing between text and input field */
+}
+
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-name, .description, .deadline {
+  width: 100%; /* Set the width to 100% to ensure the text boxes are aligned in rows */
+  margin-bottom: 10px; /* Add margin between the text boxes */
+}
+
+
+.header-text {
+  display: flex;
+  align-items: center; 
+}
+
+.favicon-icon {
+  display: inline-block;
+  width: 50px; 
+  height: 50px;
+  background-image: url('./app/header/7Nuk2tNR.ico');
+  background-size: cover; 
+  margin-right: 8px; 
+}
