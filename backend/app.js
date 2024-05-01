@@ -1,11 +1,12 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-const cors = require('cors'); // Ensure you import CORS
+const cors = require('cors');
+const Post = require('./post.model');
 
 const app = express();
 
-// Connect to MongoDB
+// MongoDB connect
 mongoose.connect('mongodb+srv://landondalevowels:agilehub@agilehubcluster.xvzdh2z.mongodb.net/posts-db', {
   useNewUrlParser: true,
   useUnifiedTopology: true
@@ -17,14 +18,10 @@ mongoose.connect('mongodb+srv://landondalevowels:agilehub@agilehubcluster.xvzdh2
     console.error('Failed to connect to MongoDB:', err);
   });
 
-// Middleware for CORS and JSON body parsing
 app.use(cors());
-app.use(bodyParser.json()); // Use bodyParser to handle JSON requests
+app.use(bodyParser.json());
 
-// Post model
-const Post = require('./post.model'); // Use the existing post model
-
-// API route to get all posts
+// API route get posts
 app.get('/api/posts', (req, res, next) => {
   Post.find()
     .then(posts => {
@@ -38,11 +35,12 @@ app.get('/api/posts', (req, res, next) => {
     });
 });
 
-// API route to add a new post
+// API route add post
 app.post('/api/posts', (req, res, next) => {
   const post = new Post({
     title: req.body.title,
-    content: req.body.content
+    content: req.body.content,
+    date: req.body.date
   });
   post.save()
     .then(createdPost => {
