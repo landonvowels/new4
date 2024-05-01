@@ -23,4 +23,19 @@ export class PostComponent {
     };
     this.postService.addPost(post);
   }
+
+
+  placeholderToLabel(placeholder: string): string {
+    switch (placeholder) {
+      case 'Project Name':
+        return 'Project Name';
+      case 'Description':
+        return 'Description (optional)';
+      case 'Deadline':
+        return 'Deadline (optional)';
+      default:
+        return '';
+    }
+}
+
 }
