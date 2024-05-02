@@ -1,0 +1,17 @@
+<div class="task-list-container">
+    <h2>Add Tasks</h2>
+    <div class="task-input">
+        <mat-form-field class="same-width">
+          <input matInput placeholder="Enter task" [(ngModel)]="newTask">
+          <button mat-button color="primary" (click)="addTask()">Add Task</button>
+        </mat-form-field>
+      </div>
+      
+    <!-- Display tasks with checkboxes -->
+    <div class="task-list">
+      <div *ngFor="let task of tasks" class="task-item">
+        <mat-checkbox>{{ task }}</mat-checkbox>
+      </div>
+    </div>
+  </div>
+  
