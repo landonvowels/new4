@@ -3,4 +3,10 @@ export interface Post{
   title: string;
   content: string;
   date: Date;
+  tasks: Task[]
+}
+
+export interface Task {
+  description: string;
+  completed: boolean;
 }
