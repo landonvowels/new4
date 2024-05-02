@@ -1,0 +1,45 @@
+.dashboard-header {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 20px;
+  }
+  
+  .dashboard-header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  
+  .dashboard-header h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: 300;
+  }
+  
+  /* Style for the cards container */
+  .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center; /* Center the cards horizontally */
+  }
+  
+  /* Style for individual post cards */
+  .post-card {
+    flex: 1 1 30%;
+    margin: 10px;
+    padding: 15px;
+    font-size: 18px;
+    background-color: #000000;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); /* Adjust shadow for better visibility */
+  }
+  
+  .mat-card-title {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .mat-card-content {
+    font-size: 16px;
+  }

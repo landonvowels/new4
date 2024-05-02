@@ -1,11 +1,16 @@
-<mat-accordion displayMode="default" [multi]="true" [hideToggle]="false" *ngIf="posts.length > 0">
-    <mat-expansion-panel [hideToggle]="false" *ngFor="let post of posts">
-      <mat-expansion-panel-header>
-        <span>{{ post.title }}</span>
-        <!-- Add delete button with click event to call deletePost function -->
-      </mat-expansion-panel-header>
-      <mat-checkbox>{{ post.content }}</mat-checkbox>
-    </mat-expansion-panel>
-  </mat-accordion>
-  <p class="info-text mat-body" *ngIf="posts.length <= 0"> No post yet</p>
+<div class="dashboard-header">
+    <h1>Dashboard</h1>
+    <h2>Here are the projects with the soonest deadline:</h2>
+  </div>
   
+  <div *ngIf="posts.length > 0" class="cards-container">
+    <mat-card *ngFor="let post of posts" class="post-card">
+      <mat-card-header>
+        <mat-card-title>{{ post.title }}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{ post.content }}</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <p *ngIf="posts.length <= 0" class="info-text mat-body">No posts yet</p>
