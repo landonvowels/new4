@@ -34,6 +34,17 @@ export class PostService {
       });
   }
 
+  fetchRecentPostsFromServer() {
+    this.http.get<{message: string, posts: Post[]}>('http://localhost:3000/api/posts/recent')
+      .subscribe((response) => {
+        this.posts = response.posts; // Ensure the _id field is preserved
+        this.postsUpdated.next([...this.posts]);
+      }, error => {
+        console.error('Failed to fetch posts:', error);
+      });
+  }
+
+
   getPosts() {
     return this.postsUpdated.asObservable();
   }

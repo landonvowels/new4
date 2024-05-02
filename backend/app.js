@@ -35,6 +35,21 @@ app.get('/api/posts', (req, res, next) => {
     });
 });
 
+app.get('/api/posts/recent', (req, res, next) => {
+  Post.find()
+    .sort({ date: 1 }) // Sort by deadline in ascending order
+    .limit(3) // Limit the results to 3 documents
+    .then(posts => {
+      res.status(200).json({
+        message: 'Fetched projects with the closest deadlines',
+        posts: posts
+      });
+    })
+    .catch(error => {
+      res.status(500).json({ message: 'Failed to fetch projects', error: error });
+    });
+});
+
 // API route add post
 app.post('/api/posts', (req, res, next) => {
   const post = new Post({
