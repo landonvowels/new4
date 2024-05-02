@@ -1,13 +1,71 @@
 .create-project-text {
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .large-text {
-  font-size: 24px;
+  font-size: 40px;
   font-weight: bold;
+  text-align: center;
+  margin-bottom: 5px;
 }
 
 .small-text {
-  font-size: 14px;
-  color: gray;
+  font-size: 15.5px;
+  color: rgb(0, 0, 0);
+  margin-bottom: 10px;
+  font-weight: bold;
 }
+
+.grey-text {
+  color: #767373; /* make the font grey */
+  margin-bottom: 100px;
+}
+
+.create-button {
+  display: block; /* Ensures the button takes up full width */
+  margin: 0 auto; /* Automatically centers the button horizontally */
+}
+
+/* Center-align content */
+.mat-form-field {
+  display: flex;
+  justify-content: center;
+}
+
+/* Center-align text */
+.large-text,
+.small-text {
+  text-align: center;
+  color: white;
+}
+
+.project-name, .description {
+  flex: 1 1 calc(50% - 10px); /* Adjusted width to 50% */
+}
+
+.project-name,
+.description,
+.deadline {
+  width: 220%; /* Adjust width as desired */
+  margin-bottom: 10px; /* Add margin between the text boxes */
+}
+
+.same-width {
+  width: 400px; /* adjust the width to your liking */
+}
+
+mat-card{
+  background: #131313
+}
+
+
+
+
+
+
+
+
+
+/* Add white thin outlines around the title of each box */
+

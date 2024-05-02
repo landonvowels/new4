@@ -15,6 +15,7 @@ import { PostComponent } from './posts/post-create/post/post.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { HeaderComponent } from './header/header.component';
 import { PostListComponent } from './post/post-list/post-list.component';
+import { TaskListComponent } from './task-list/task-list.component';
 import { FooterComponent } from './footer/footer/footer.component';
 
 @NgModule({
@@ -23,7 +24,7 @@ import { FooterComponent } from './footer/footer/footer.component';
     PostComponent,
     HeaderComponent,
     PostListComponent,
-    FooterComponent
+    TaskListComponent
   ],
   imports: [
     BrowserModule,

@@ -1,22 +1,41 @@
-<mat-card>
+<mat-card class="post-card">
   <div class="create-project-container">
     <div class="create-project-text">
       <span class="large-text">Create New Project</span>
-      <span class="small-text">Enter the details below to start a new project</span>
+    </div>
+    <div class="create-project-text">
+      <span class="grey-text">Enter the details below to start a new project</span>
     </div>
   </div>
   <div class="form-container">
-    <mat-form-field class="project-name">
-      <input matInput type="text" placeholder="Project Name" [(ngModel)]="enteredTitle">
-    </mat-form-field>
-    <mat-form-field class="description">
-      <textarea matInput placeholder="Description" [(ngModel)]="enteredContent" rows="6"></textarea>
-    </mat-form-field>
-    <mat-form-field class="deadline">
-      <input matInput [matDatepicker]="picker" placeholder="Deadline" [(ngModel)]="enteredDate" name="enteredDate">
-      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-      <mat-datepicker #picker></mat-datepicker>
-    </mat-form-field>
+    <div class="input-label project-name">
+      <span class="small-text">Project Name</span>
+      <mat-form-field class="same-width white-border">
+        <input matInput type="text" placeholder="Enter project name" [(ngModel)]="enteredTitle">
+      </mat-form-field>
+    </div>
+    
+    <div class="input-label description">
+      <span class="small-text">Description</span>
+      <mat-form-field class="same-width white-border">
+        <textarea matInput placeholder="Enter project description" [(ngModel)]="enteredContent" rows="6"></textarea>
+      </mat-form-field>
+    </div>
+    
+    <div class="input-label deadline">
+      <span class="small-text">Deadline </span>
+      <mat-form-field class="same-width white-border">
+        <input matInput [matDatepicker]="picker" placeholder="Select Date" [(ngModel)]="enteredDate" name="enteredDate">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    </div>
   </div>
-  <button mat-raised-button color="primary" class="create-button" (click)="onAddPost()">Save Post</button>
+<!-- add tasks -->
+  <app-task-list></app-task-list>
+
+  <!-- Save Post button -->
+  <button mat-raised-button color="black" class="create-button" (click)="onAddPost()">+ Save Post</button>
+
 </mat-card>
+<app-task-list></app-task-list>

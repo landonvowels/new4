@@ -3,6 +3,7 @@ mat-toolbar {
     justify-content: space-between;
     align-items: center;
     padding: 0 10px;
+    background-color: #131313
   }
   
   mat-toolbar a:first-child {
@@ -40,3 +41,5 @@ mat-toolbar {
       margin-bottom: 10px;
     }
   }
+
+  

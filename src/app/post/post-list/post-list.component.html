@@ -1,13 +1,23 @@
-<mat-accordion displayMode="default" [multi]="true"
-               [hideToggle]="false" *ngIf="posts.length > 0">
+<!-- <mat-accordion displayMode="default" [multi]="true" [hideToggle]="false" *ngIf="posts.length > 0">
     <mat-expansion-panel [hideToggle]="false" *ngFor="let post of posts">
-        <mat-expansion-panel-header>
-         {{post.title}}
-        </mat-expansion-panel-header>
-         <p>{{post.content}}</p>
-        <mat-action-row>
-
-        </mat-action-row>
+      <mat-expansion-panel-header>
+        {{ post.title }}
+      </mat-expansion-panel-header>
+      <mat-checkbox>{{ post.content }}</mat-checkbox>
     </mat-expansion-panel>
-</mat-accordion>
-<p class="info-text mat-body" *ngIf="posts.length <=0 "> No post yet</p>
+  </mat-accordion>
+  <p class="info-text mat-body" *ngIf="posts.length <= 0 "> No post yet</p> -->
+
+
+  <mat-accordion displayMode="default" [multi]="true" [hideToggle]="false" *ngIf="posts.length > 0">
+    <mat-expansion-panel [hideToggle]="false" *ngFor="let post of posts">
+      <mat-expansion-panel-header>
+        <span>{{ post.title }}</span>
+        <!-- Add delete button with click event to call deletePost function -->
+        <button mat-button color="warn" (click)="deletePost(post._id)">Delete</button>
+      </mat-expansion-panel-header>
+      <mat-checkbox>{{ post.content }}</mat-checkbox>
+    </mat-expansion-panel>
+  </mat-accordion>
+  <p class="info-text mat-body" *ngIf="posts.length <= 0"> No post yet</p>
+  

@@ -37,4 +37,18 @@ export class PostService {
   getPosts() {
     return this.postsUpdated.asObservable();
   }
+
+  deletePost(postId: string) {
+    this.http.delete<{ message: string }>(`http://localhost:3000/api/posts/${postId}`)
+      .subscribe(() => {
+        // Convert postId to string if necessary
+        postId = String(postId); 
+        this.posts = this.posts.filter(post => post._id !== postId);
+        this.postsUpdated.next([...this.posts]);
+      }, error => {
+        console.error('Failed to delete post:', error);
+      });
+  }
+  
 }
+  
