@@ -68,3 +68,18 @@ mat-card{
 .save-button {
   align-self: center;
 }
+
+
+.input-label.tasks {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.input-label.tasks mat-form-field {
+  margin-bottom: 10px; 
+}
+
+.input-label.tasks button {
+  align-self: center; 
+}

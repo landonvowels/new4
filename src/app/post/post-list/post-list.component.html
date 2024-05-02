@@ -21,11 +21,11 @@
       <div *ngIf="post.tasks?.length > 0">
         <h3>Tasks:</h3>
         <ul>
-          <li *ngFor="let task of post.tasks">
+          <li *ngFor="let task of post.tasks" > 
             <mat-checkbox
               [checked]="task.completed"
-              (change)="toggleTaskCompletion(post._id, task._id, $event.checked)">
-              {{ task.description }}
+              (change)="toggleTaskCompletion(post._id, task._id, $event.checked)" >
+              <p style="color: white; font-family: 'Roboto', 'Helvetica Neue', sans-serif;">{{ task.description }}</p>
             </mat-checkbox>
           </li>
         </ul>
