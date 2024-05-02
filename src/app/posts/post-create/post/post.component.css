@@ -83,3 +83,13 @@ mat-card{
 .input-label.tasks button {
   align-self: center; 
 }
+
+.task-list {
+  max-height: 100px;
+  overflow-y: auto;
+  margin-bottom: 15px;
+}
+
+.save-button {
+  margin-bottom: 20px;
+}

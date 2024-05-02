@@ -38,7 +38,9 @@
     <input matInput placeholder="Enter task" [(ngModel)]="newTaskDescription">
   </mat-form-field>
   <button mat-button color="primary" (click)="addTask()">Add Task</button>
-  <p *ngFor="let task of tasks" style="color: white">{{ task.description }}</p>
+  <div class="task-list">
+    <p *ngFor="let task of tasks" style="color: white">{{ task.description }}</p>
+  </div>
 </div>
 
   <!-- Save Post button -->

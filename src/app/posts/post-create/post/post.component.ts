@@ -33,6 +33,11 @@
        tasks: this.tasks
      };
      this.postService.addPost(post);
+     
+    this.enteredTitle = '';
+    this.enteredContent = '';
+    this.enteredDate = null;
+    this.tasks = [];
    }
    
  }
