@@ -1,14 +1,17 @@
 <div class="project-header">
   <h1>YOUR PROJECTS</h1>
   <p>Manage and track the progress of all of your projects</p>
+  <button mat-raised-button color="primary" routerLink="/create">Create New Project</button>
+
 </div>
 
-<mat-accordion displayMode="default" [multi]="true" [hideToggle]="false" *ngIf="posts.length > 0">
+
+<mat-accordion displayMode="default" [multi]="true" [hideToggle]="false" max-width="800px" *ngIf="posts.length > 0">
   <mat-expansion-panel [hideToggle]="false" *ngFor="let post of posts">
     <mat-expansion-panel-header>
       <span>{{ post.title }}</span>
       <button mat-button color="warn" class="delete-button" (click)="deletePost(post._id)">
-        <mat-icon>delete</mat-icon>
+        <mat-icon>Delete</mat-icon>
       </button>
     </mat-expansion-panel-header>
     <div class="information-text">

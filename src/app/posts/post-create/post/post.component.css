@@ -18,13 +18,13 @@
 }
 
 .grey-text {
-  color: #767373; /* make the font grey */
+  color: #767373; 
   margin-bottom: 100px;
 }
 
 .create-button {
-  display: block; /* Ensures the button takes up full width */
-  margin: 0 auto; /* Automatically centers the button horizontally */
+  display: block;
+  margin: 0 auto; 
 }
 
 /* Center-align content */
@@ -33,7 +33,6 @@
   justify-content: center;
 }
 
-/* Center-align text */
 .large-text,
 .small-text {
   text-align: center;
@@ -41,22 +40,31 @@
 }
 
 .project-name, .description {
-  flex: 1 1 calc(50% - 10px); /* Adjusted width to 50% */
+  flex: 1 1 calc(50% - 10px);
 }
 
 .project-name,
 .description,
 .deadline {
-  width: 220%; /* Adjust width as desired */
-  margin-bottom: 10px; /* Add margin between the text boxes */
+  width: 220%; 
+  margin-bottom: 10px; 
 }
 
 .same-width {
-  width: 400px; /* adjust the width to your liking */
+  width: 400px; 
 }
 
 mat-card{
   background: #131313;
-  border: 2px solid #fff;
   padding: 20px;
+}
+
+.post-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.save-button {
+  align-self: center;
 }
