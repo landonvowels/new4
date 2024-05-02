@@ -18,6 +18,7 @@ import { PostListComponent } from './post/post-list/post-list.component';
 import { TaskListComponent } from './task-list/task-list.component';
 import { FooterComponent } from './footer/footer/footer.component';
 import { RecentPostsComponent } from './recent-posts/recent-posts.component';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { RecentPostsComponent } from './recent-posts/recent-posts.component';
     PostListComponent,
     TaskListComponent,
     FooterComponent,
-    RecentPostsComponent
+    RecentPostsComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -41,6 +43,7 @@ import { RecentPostsComponent } from './recent-posts/recent-posts.component';
     HttpClientModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    MatCheckboxModule
   ],
   providers: [
     provideAnimationsAsync()

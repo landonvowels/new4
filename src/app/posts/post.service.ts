@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject } from 'rxjs';
 import { Post } from './post.model';
+import { Task } from './post.model';
 
 @Injectable({
   providedIn: 'root'
@@ -22,6 +23,14 @@ export class PostService {
       }, error => {
         console.error('Failed to add post:', error);
       });
+  }
+
+  addTaskToPost(postId: string, task: Task) {
+    return this.http.post<Post>(`http://localhost:3000/api/post/${postId}/tasks`, task);
+  }
+
+  updateTaskStatus(postId: string, taskId: string, completed: boolean) {
+    return this.http.patch(`http://localhost:3000/api/posts/${postId}/tasks/${taskId}`, { completed });
   }
 
   fetchPostsFromServer() {

@@ -18,6 +18,19 @@
       <p><strong>Title:</strong> {{ post.title }}</p>
       <p><strong>Description:</strong> {{ post.content }}</p>
       <p><strong>Deadline:</strong> {{ post.date | date: 'fullDate' }}</p>
+      <div *ngIf="post.tasks?.length > 0">
+        <h3>Tasks:</h3>
+        <ul>
+          <li *ngFor="let task of post.tasks">
+            <mat-checkbox
+              [checked]="task.completed"
+              (change)="toggleTaskCompletion(post._id, task._id, $event.checked)">
+              {{ task.description }}
+            </mat-checkbox>
+          </li>
+        </ul>
+      </div>
+      <p *ngIf="!post.tasks || post.tasks.length === 0">No tasks assigned to this post.</p>
     </div>
   </mat-expansion-panel>
 </mat-accordion>

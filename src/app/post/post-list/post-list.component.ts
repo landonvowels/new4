@@ -20,7 +20,11 @@ export class PostListComponent implements OnInit {
       this.posts = posts;
     });
   }
-
+  toggleTaskCompletion(postId: string, taskId: string, completed: boolean) {
+    this.postService.updateTaskStatus(postId, taskId, completed)
+      .subscribe(updatedPost => {
+      });
+  }
   // Function to delete a post
   deletePost(postId: string) {
     this.postService.deletePost(postId);
