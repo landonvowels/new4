@@ -23,11 +23,6 @@ export class RecentPostsComponent implements OnInit {
     });
   }
 
-  // Function to delete a post
-  deletePost(postId: string) {
-    this.postService.deletePost(postId);
-  }
-
   ngOnDestroy() {
     this.postsSub.unsubscribe();
   }
