@@ -17,6 +17,7 @@ import { HeaderComponent } from './header/header.component';
 import { PostListComponent } from './post/post-list/post-list.component';
 import { TaskListComponent } from './task-list/task-list.component';
 import { FooterComponent } from './footer/footer/footer.component';
+import { RecentPostsComponent } from './recent-posts/recent-posts.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { FooterComponent } from './footer/footer/footer.component';
     HeaderComponent,
     PostListComponent,
     TaskListComponent,
-    FooterComponent
+    FooterComponent,
+    RecentPostsComponent
   ],
   imports: [
     BrowserModule,
