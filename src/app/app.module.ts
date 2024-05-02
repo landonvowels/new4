@@ -24,7 +24,8 @@ import { FooterComponent } from './footer/footer/footer.component';
     PostComponent,
     HeaderComponent,
     PostListComponent,
-    TaskListComponent
+    TaskListComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
