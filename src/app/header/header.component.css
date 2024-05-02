@@ -3,6 +3,7 @@ mat-toolbar {
     justify-content: space-between;
     align-items: center;
     padding: 0 10px; /* Adjust padding for spacing on the sides */
+    background-color: #131313
   }
   
   /* Brand or logo section */
@@ -44,3 +45,5 @@ mat-toolbar {
       margin-bottom: 10px; /* Extra margin for the brand/logo on small screens */
     }
   }
+
+  

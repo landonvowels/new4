@@ -54,4 +54,21 @@ app.post('/api/posts', (req, res, next) => {
     });
 });
 
+// API route delete post
+app.delete('/api/posts/:id', (req, res, next) => {
+  const postId = req.params.id;
+  Post.deleteOne({ _id: postId })
+    .then(result => {
+      if (result.deletedCount > 0) {
+        res.status(200).json({ message: 'Post deleted successfully' });
+      } else {
+        res.status(404).json({ message: 'Post not found' });
+      }
+    })
+    .catch(error => {
+      res.status(500).json({ message: 'Failed to delete post', error: error });
+    });
+});
+
+
 module.exports = app;

@@ -9,4 +9,15 @@
   }
   
   
-  
+.mat-form-field,
+.mat-checkbox {
+  display: flex;
+  justify-content: center;
+}
+
+/* Center-align text */
+.mat-expansion-panel-header,
+.mat-checkbox-label {
+  text-align: center;
+}
+
