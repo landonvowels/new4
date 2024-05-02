@@ -17,7 +17,7 @@
    onAddPost() {
      const post: Post = {
        title: this.enteredTitle,
-       content: `${this.enteredContent} Date: ${this.enteredDate}`, // Include date in content
+       content: this.enteredContent, // Include date in content
        date: this.enteredDate // Set date property
      };
      this.postService.addPost(post);

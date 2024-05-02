@@ -6,6 +6,8 @@
   
   .info-text{
     text-align: center;
+    color: white;
+    font-size: 19px;
   }
   
   
@@ -19,5 +21,99 @@
 .mat-expansion-panel-header,
 .mat-checkbox-label {
   text-align: center;
+}
+
+
+.header-actions {
+  display: flex;
+  align-items: center;
+}
+
+.header-actions button {
+  margin-left: auto; /* This pushes the delete button to the right */
+}
+
+
+
+.delete-button {
+  margin-left: auto; /* right align the button */
+  border: 1px solid red;
+}
+
+
+mat-checkbox, .info {
+  display: block;
+}
+
+mat-expansion-panel {
+  background-color: #131313; /* black background */
+}
+
+mat-expansion-panel-content p {
+  color: #aaa; /* grey text */
+}
+
+mat-expansion-panel-header span {
+  color: #fff; 
+  font-weight: bold;/* white title font */
+}
+
+.project-details {
+  color: #aaa; /* grey project details */
+}
+
+.project-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.project-header h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #cec7c7;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.project-header p {
+  font-size: 18px;
+  color: #797373;
+  text-align: center;
+}
+
+.information-text{
+  color: rgb(143, 143, 143);
+  border-radius: 10px;
+  padding: 10px
+}
+
+
+mat-expansion-panel-header {
+  padding: 10px;
+  margin-top: 10px;
+}
+
+mat-expansion-panel-content {
+  border: 1px solid #fff;
+  padding: 10px;
+  margin-top: -1px; /* removes the gap between the header and content borders */
+  border-radius: 0 0 10px 10px; /* adds a rounded corner to the bottom of the border */
+}
+
+.mat-expansion-panel{
+  border: 1px solid #fff;
+  
+}
+
+.mat-expansion-panel-body {
+  padding: 10px; /* add padding to the body */
+}
+
+
+.mat-expansion-panel-header span,
+.information-text,
+.project-header h1,
+.project-header p {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
