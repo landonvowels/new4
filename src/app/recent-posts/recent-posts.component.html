@@ -1,16 +1,17 @@
 <div class="dashboard-header">
-    <h1>Dashboard</h1>
-    <h2>Here are the projects with the soonest deadline:</h2>
-  </div>
-  
-  <div *ngIf="posts.length > 0" class="cards-container">
-    <mat-card *ngFor="let post of posts" class="post-card">
-      <mat-card-header>
-        <mat-card-title>{{ post.title }}</mat-card-title>
-      </mat-card-header>
-      <mat-card-content>
-        <p>{{ post.content }}</p>
-      </mat-card-content>
-    </mat-card>
-  </div>
-  <p *ngIf="posts.length <= 0" class="info-text mat-body">No posts yet</p>
+  <h1>Dashboard</h1>
+  <h2>Welcome to your project management dashboard. Here are the projects with the nearest deadline.</h2>
+</div>
+
+<div *ngIf="posts.length > 0" class="cards-container">
+  <mat-card *ngFor="let post of posts" class="post-card">
+    <mat-card-header>
+      <mat-card-title>{{ post.title }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p>{{ post.content }}</p>
+      <p>Deadline: {{post.date | date: 'fullDate'  }}</p>
+    </mat-card-content>
+  </mat-card>
+</div>
+<p *ngIf="posts.length <= 0" class="info-text mat-body">No posts yet</p>

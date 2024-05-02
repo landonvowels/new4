@@ -30,13 +30,13 @@
 }
 
 .header-actions button {
-  margin-left: auto; /* This pushes the delete button to the right */
+  margin-left: auto; 
 }
 
 
 
 .delete-button {
-  margin-left: auto; /* right align the button */
+  margin-left: auto; 
   border: 1px solid red;
 }
 
@@ -46,20 +46,20 @@ mat-checkbox, .info {
 }
 
 mat-expansion-panel {
-  background-color: #131313; /* black background */
+  background-color: #131313;
 }
 
 mat-expansion-panel-content p {
-  color: #aaa; /* grey text */
+  color: #aaa; 
 }
 
 mat-expansion-panel-header span {
   color: #fff; 
-  font-weight: bold;/* white title font */
+  font-weight: bold;
 }
 
 .project-details {
-  color: #aaa; /* grey project details */
+  color: #aaa; 
 }
 
 .project-header {
@@ -81,13 +81,6 @@ mat-expansion-panel-header span {
   text-align: center;
 }
 
-.information-text{
-  color: rgb(143, 143, 143);
-  border-radius: 10px;
-  padding: 10px
-}
-
-
 mat-expansion-panel-header {
   padding: 10px;
   margin-top: 10px;
@@ -97,7 +90,7 @@ mat-expansion-panel-content {
   border: 1px solid #fff;
   padding: 10px;
   margin-top: -1px; /* removes the gap between the header and content borders */
-  border-radius: 0 0 10px 10px; /* adds a rounded corner to the bottom of the border */
+  border-radius: 0 0 10px 10px; 
 }
 
 .mat-expansion-panel{
@@ -106,7 +99,7 @@ mat-expansion-panel-content {
 }
 
 .mat-expansion-panel-body {
-  padding: 10px; /* add padding to the body */
+  padding: 10px; 
 }
 
 
@@ -117,3 +110,17 @@ mat-expansion-panel-content {
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
+.mat-expansion-panel-header {
+  font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.information-text {
+  font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  color: rgb(195, 188, 188);
+  border-radius: 10px;
+  padding: 10px
+}
