@@ -11,6 +11,15 @@
     <mat-card-content>
       <p>{{ post.content }}</p>
       <p>Deadline: {{post.date | date: 'fullDate'  }}</p>
+      <div *ngIf="post.tasks?.length > 0">
+        <h4>Tasks:</h4>
+        <ul>
+          <li *ngFor="let task of post.tasks">
+            {{ task.description }} - {{ task.completed ? 'Completed' : 'Incomplete' }}
+          </li>
+        </ul>
+      </div>
+      <p *ngIf="!post.tasks || post.tasks.length === 0">No tasks assigned to this post.</p>
     </mat-card-content>
   </mat-card>
 </div>
