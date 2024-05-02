@@ -2,12 +2,8 @@ mat-toolbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-<<<<<<< HEAD
-    padding: 0 10px; /* Adjust padding for spacing on the sides */
-    background-color: #131313
-=======
     padding: 0 10px;
->>>>>>> origin/main
+    background-color: #131313
   }
   
   mat-toolbar a:first-child {
